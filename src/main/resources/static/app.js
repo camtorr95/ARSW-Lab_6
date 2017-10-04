@@ -6,7 +6,7 @@ var app = (function () {
             this.y=y;
         }        
     }
-    
+
     var stompClient = null;
 
     var addPointToCanvas = function (point) {        
