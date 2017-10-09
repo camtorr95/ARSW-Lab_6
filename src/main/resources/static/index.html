@@ -32,12 +32,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 
-    <body onload="event_listener.init()">
+    <body>
         <div class="col-md-10"></div>
         <div class="col-md-10">
             <div class="row">
                 ID:<input id="pic_id" type="number"/>
-                <button onclick="app.init($('#pic_id').val())">Connect</button>
+                <button onclick="app.init($('#pic_id').val()), event_listener.init()">Connect</button>
                 <label id="connected_to"></label>
             </div>
             <div class="row">
