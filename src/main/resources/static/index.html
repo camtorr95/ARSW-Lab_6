@@ -25,15 +25,29 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <script src="/webjars/stomp-websocket/stomp.min.js"></script>
         <script src="/app.js"></script>
         <script src="/eventlistener.js"></script>
-
+        <link rel="stylesheet"
+              href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
 
 
-    
-    <body onload="app.init(), event_listener.init()">
-        X:<input id="x" type="number"/>
-        Y:<input id="y" type="number"/>        
-        <button onclick="app.publishPoint($('#x').val(),$('#y').val())">Send point</button>
-        <canvas id="canvas" width="800" height="600"></canvas>
+
+    <body onload="event_listener.init()">
+        <div class="col-md-10"></div>
+        <div class="col-md-10">
+            <div class="row">
+                ID:<input id="pic_id" type="number"/>
+                <button onclick="app.init($('#pic_id').val())">Connect</button>
+                <label id="connected_to"></label>
+            </div>
+            <div class="row">
+                <canvas id="canvas" width="800" height="600"></canvas>
+            </div>
+            <div class="row">
+                X:<input id="x" type="number"/>
+                Y:<input id="y" type="number"/>
+                <button onclick="app.publishPoint($('#x').val(), $('#y').val())">Send point</button>
+            </div>
+        </div>
     </body>
 </html>

@@ -1,1 +1,8 @@
+canvas{
+    border:1px solid #000000;
+}
 
+div{
+    margin-left: 20px;
+    padding: 3px;
+}

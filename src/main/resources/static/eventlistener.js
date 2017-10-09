@@ -11,7 +11,7 @@ event_listener = (function () {
             var canvas = $("#canvas").get(0);
 
             var handler = function (event) {
-                var offset = {"x": Math.round($("#canvas").offset().left), "y": $("#canvas").offset().top};
+                var offset = {"x": $("#canvas").offset().left, "y": $("#canvas").offset().top};
                 app.publishPoint(event.pageX - offset.x, event.pageY - offset.y);
             };
 
