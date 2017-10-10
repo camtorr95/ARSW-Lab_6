@@ -24,7 +24,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <script src="/webjars/sockjs-client/sockjs.min.js"></script>
         <script src="/webjars/stomp-websocket/stomp.min.js"></script>
         <script src="/app.js"></script>
-        <script src="/eventlistener.js"></script>
         <link rel="stylesheet"
               href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="styles.css">
@@ -37,7 +36,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <div class="col-md-10">
             <div class="row">
                 ID:<input id="pic_id" type="number"/>
-                <button onclick="app.init($('#pic_id').val()), event_listener.init()">Connect</button>
+                <button onclick="app.init($('#pic_id').val())">Connect</button>
                 <label id="connected_to"></label>
             </div>
             <div class="row">
